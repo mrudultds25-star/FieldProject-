@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Earth | Save Our Planet</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26352d;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px #0001;
+}
+
+.logo {
+    color: #176b45;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #173b2c;
+    text-decoration: none;
+    margin: 7px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8baa42;
+}
+
+.hero {
+    min-height: 500px;
+    padding: 100px 8%;
+    color: white;
+    background:
+        linear-gradient(#123c2bc9, #123c2b99),
+        url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 65px);
+    max-width: 750px;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #b9dc78;
+    color: #173b2c;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+h2 {
+    color: #176b45;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.light {
+    background: #f2f7ed;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000012;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    color: #176b45;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #58665d;
+}
+
+ul {
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+li {
+    margin-bottom: 9px;
+}
+
+.quiz-box {
+    max-width: 700px;
+    margin: 25px auto 0;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0001;
+}
+
+.question {
+    margin-bottom: 22px;
+}
+
+.question p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question label {
+    display: block;
+    padding: 7px;
+    cursor: pointer;
+}
+
+#result {
+    color: #176b45;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+form {
+    max-width: 650px;
+    margin: 25px auto 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+footer {
+    background: #173b2c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌿 Green Earth</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#climate">Climate</a>
+        <a href="#resources">Resources</a>
+        <a href="#agriculture">Agriculture</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<section class="hero" id="home">
+    <h1>A Greener Planet Starts With Us</h1>
+
+    <p>
+        Learn about climate change, natural resource management
+        and sustainable agriculture. Together, we can protect
+        the environment and build a better future.
+    </p>
+
+    <a href="#about" class="btn">Explore Our Project</a>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+    <div class="intro">
+        <h2>About Green Earth</h2>
+
+        <p>
+            Green Earth is an educational website designed to spread
+            awareness about environmental protection. It explains
+            the importance of climate change awareness, conservation
+            of natural resources and sustainable agricultural practices.
+        </p>
+
+        <p>
+            Our mission is to encourage students and communities
+            to adopt eco-friendly habits and protect our planet.
+        </p>
+    </div>
+</section>
+
+<!-- CLIMATE CHANGE -->
+<section class="light" id="climate">
+    <div class="intro">
+        <h2>Climate Change</h2>
+
+        <p>
+            Climate change refers to long-term changes in temperature
+            and weather patterns. Human activities, particularly
+            burning fossil fuels, are a major cause of recent global warming.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=80"
+                alt="Air pollution">
+
+            <div class="card-content">
+                <h3>Causes</h3>
+                <p>
+                    Burning fossil fuels, deforestation, industrial
+                    emissions and vehicle pollution contribute to
+                    climate change.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=800&q=80"
+                alt="Dry landscape">
+
+            <div class="card-content">
+                <h3>Effects</h3>
+                <p>
+                    Climate change can increase heatwaves, alter
+                    rainfall patterns, raise sea levels and harm
+                    ecosystems and agriculture.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
+                alt="Renewable energy">
+
+            <div class="card-content">
+                <h3>Prevention</h3>
+                <p>
+                    Save electricity, use renewable energy, plant
+                    suitable trees, reduce waste and use cleaner
+                    transport whenever possible.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- NATURAL RESOURCES -->
+<section id="resources">
+    <div class="intro">
+        <h2>Natural Resource Management</h2>
+
+        <p>
+            Natural resources such as water, forests and soil are
+            essential for life. Their responsible use helps protect
+            the environment for future generations.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=800&q=80"
+                alt="Water">
+
+            <div class="card-content">
+                <h3>Water Conservation</h3>
+                <p>
+                    Repair leaking taps, avoid wasting water,
+                    collect rainwater where suitable and keep
+                    water bodies clean.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80"
+                alt="Green forest">
+
+            <div class="card-content">
+                <h3>Forest Conservation</h3>
+                <p>
+                    Protect forests, plant native trees, reduce
+                    paper waste and preserve wildlife habitats.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                alt="Agricultural land">
+
+            <div class="card-content">
+                <h3>Soil Conservation</h3>
+                <p>
+                    Compost organic waste, prevent soil erosion,
+                    rotate crops and maintain soil fertility.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SUSTAINABLE AGRICULTURE -->
+<section class="light" id="agriculture">
+    <div class="intro">
+        <h2>Sustainable Agriculture</h2>
+
+        <p>
+            Sustainable agriculture produces food while protecting
+            the environment, maintaining soil fertility and using
+            water and other resources responsibly.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🌱 Organic Farming</h3>
+                <p>
+                    Use compost and other suitable natural methods
+                    to support soil health and reduce dependence
+                    on synthetic agricultural inputs.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>💧 Smart Irrigation</h3>
+                <p>
+                    Use efficient irrigation methods, such as
+                    drip irrigation where suitable, to reduce
+                    unnecessary water use.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🌾 Crop Rotation</h3>
+                <p>
+                    Growing different crops in sequence can help
+                    maintain soil health and manage certain
+                    pests and diseases.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities">
+    <div class="intro">
+        <h2>Environmental Activities</h2>
+
+        <p>
+            Everyone can help protect the environment through
+            simple actions at home, school and in the community.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🌳 Tree Plantation</h3>
+                <p>
+                    Plant suitable native trees and take care
+                    of them as they grow.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>♻️ Waste Management</h3>
+                <p>
+                    Reduce, reuse and recycle materials.
+                    Separate waste and compost suitable
+                    organic materials.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>💧 Save Water</h3>
+                <p>
+                    Avoid wasting water and encourage your
+                    family and friends to conserve it.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- QUIZ -->
+<section class="light" id="quiz">
+    <div class="intro">
+        <h2>Green Earth Quiz</h2>
+        <p>Test your environmental knowledge!</p>
+    </div>
+
+    <div class="quiz-box">
+        <form id="quizForm">
+
+            <div class="question">
+                <p>1. Which gas contributes to global warming?</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a" required>
+                    Oxygen
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Carbon dioxide
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Helium
+                </label>
+            </div>
+
+            <div class="question">
+                <p>2. Which action saves water?</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a" required>
+                    Leaving taps running
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    Throwing waste into rivers
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    Repairing leaking taps
+                </label>
+            </div>
+
+            <div class="question">
+                <p>3. What is one benefit of composting?</p>
+
+                <label>
+                    <input type="radio" name="q3" value="a" required>
+                    Improving soil health
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Creating plastic
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Wasting water
+                </label>
+            </div>
+
+            <button class="btn" type="submit">
+                Check My Score
+            </button>
+
+            <button class="btn" type="reset">
+                Try Again
+            </button>
+
+            <p id="result"></p>
+        </form>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="intro">
+        <h2>Contact Us</h2>
+
+        <p>
+            Share your ideas for making our planet greener.
+        </p>
+    </div>
+
+    <form id="contactForm">
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required>
+
+        <textarea
+            id="message"
+            placeholder="Write your environmental idea"
+            required></textarea>
+
+        <button class="btn" type="submit">
+            Submit
+        </button>
+
+        <p id="contactResult"></p>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>🌿 Green Earth</h3>
+
+    <p>
+        Protect Nature, Preserve Life, Build a Better Future.
+    </p>
+
+    <p>
+        © 2026 Green Earth | Educational Project
+    </p>
+
+    <a href="#home" style="color:#b9dc78;">
+        Back to Top ↑
+    </a>
+</footer>
+
+<script>
+// QUIZ FUNCTION
+document.getElementById("quizForm").addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
+
+        const answers = {
+            q1: "b",
+            q2: "c",
+            q3: "a"
+        };
+
+        let score = 0;
+
+        for (let question in answers) {
+            const selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        document.getElementById("result").textContent =
+            "Your score is " + score + " out of 3. " +
+            (score === 3
+                ? "Excellent! You are an environment champion!"
+                : "Good effort! Keep learning and try again.");
+    }
+);
+
+// RESET QUIZ RESULT
+document.getElementById("quizForm").addEventListener(
+    "reset",
+    function() {
+        document.getElementById("result").textContent = "";
+    }
+);
+
+// CONTACT FORM DEMONSTRATION
+document.getElementById("contactForm").addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+
+        document.getElementById("contactResult").textContent =
+            "Thank you, " + name +
+            "! Your idea has been recorded for this demonstration.";
+
+        this.reset();
+    }
+);
+</script>
+
+</body>
+</html>
